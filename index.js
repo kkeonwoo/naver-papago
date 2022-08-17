@@ -45,20 +45,20 @@ app.post("/papago", (req, res) => {
       // console.log(error);
       res.send(error);
     });
-  const queryTxt = encodeURIComponent(req.query.typing);
-  axios({
-    url: `https://openapi.naver.com/v1/papago/detectLangs?query=${queryTxt}`,
-    method: "POST",
-    headers: {
-      "X-Naver-Client-Id": "f5lsoT583CxvfsjQRzRN",
-      "X-Naver-Client-Secret": "GGg7YRqJM2",
-    },
-    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-  }).then((response) => {
-    // console.log(response);
-    res.json({ result: response.langcode });
-    // res.send(response.langcode);
-  });
+  // const queryTxt = encodeURIComponent(req.query.typing);
+  // axios({
+  //   url: `https://openapi.naver.com/v1/papago/detectLangs?query=${queryTxt}`,
+  //   method: "POST",
+  //   headers: {
+  //     "X-Naver-Client-Id": "f5lsoT583CxvfsjQRzRN",
+  //     "X-Naver-Client-Secret": "GGg7YRqJM2",
+  //   },
+  //   "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+  // }).then((response) => {
+  //   // console.log(response);
+  //   res.json({ result: response.langcode });
+  //   // res.send(response.langcode);
+  // });
 });
 app.listen(port, () => {
   console.log(`${port}번에서 서버 대기중`);
