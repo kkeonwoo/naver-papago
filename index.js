@@ -16,9 +16,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// app.get("/", (req, res) => {
+//   res.send("hello express");
+// });
 app.post("/papago", (req, res) => {
   console.log(req.body.txt);
   const txt = req.body.txt;
